@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script src="https://kit.fontawesome.com/7bffae77f8.js" crossorigin="anonymous"></script>
 </head>
@@ -17,16 +17,72 @@
                 <li class="header__li"><a class="header__a" href="../index.html">home</a></li>
                 <li class="header__li"><a class="header__a" href="../pages/champions.html">champions</a></li>
                 <li class="header__li"><a class="header__a" href="../pages/arcane.html">Arcane</a></li>
-                <li class="header__li"><a class="header__a" href="../pages/rift.html">Summoner's Rift</a></li>
+                <li class="header__li"><a class="header__a" href="../pages/rift.html">Wallpapers</a></li>
                 <li class="header__li"><a class="header__a" href="../pages/contact.html">contact</a></li>
             </ul>
         </nav>
 
     </header>
 
-    <main>
+    <main class="contact">
+        <form class="contact__form" action="">
+        <fieldset class="contact__field">
+            <legend class="contact__legend">User Data</legend>
+       
+            <label for="name">Name:</label>
+            <input placeholder="Name" type="text" id="name" name="name" required>
 
+            <label for="">Email:</label>
+            <input placeholder="Email" type="email" id="email" name="email" required>
 
+            <label for="pass">Password</label>
+            <input placeholder="Password" type="password" id="pass" name="pass" required>
+
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday">
+    
+            <textarea placeholder="Ingrese su informacion" name="description" id="description" cols="30" rows="10"></textarea>
+          
+    </fieldset>
+    <fieldset  class="contact__field">
+    <legend>Favorites Champions</legend>
+
+    <input type="radio" id="lux" name="champion" value="lux">
+    <label for="lux">Lux</label>
+
+    <input type="radio" id="morgana" name="champion" value="morgana">
+    <label for="morgana">Morgana</label>
+
+    <input type="radio" id="Miss fortune" name="champion" value="Miss fortune">
+    <label for="Miss fortune">Miss Fortune</label>
+    
+    <select name="champion2" id="champion2">
+        <option value="blue">Lux</option>
+        <option value="red">Morgana</option>
+        <option value="Green">Miss Fortune</option>
+    </select>
+    
+    <!-- <input type="color"> -->
+    </fieldset>
+
+    <fieldset  class="contact__field">
+        <legend>Rank</legend>
+        
+        <input type="checkbox" id="plata" name="hobby1" value="plata">
+        <label for="plata">plata</label>
+
+        <input type="checkbox" id="oro" name="hobby2" value="oro">
+        <label for="oro">Oro</label>
+
+        <input type="checkbox" id="platino" name="hobby3" value="platino">
+        <label for="platino">platino</label>
+
+    </fieldset>
+
+    <input type="submit" value="Send Data">
+    <input type="reset" value="delete">
+
+</form>
     </main>
 
 

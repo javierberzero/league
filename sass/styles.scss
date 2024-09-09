@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: "Roboto", sans-serif;
+
+}
 
 .header{
     display: flex;
@@ -224,21 +228,112 @@
 
 .rift{
     background-color: black;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &__container{
-        display: flex;
-      
-       
+    width: 100%;
+    height: 70vh;
+    object-fit:cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:repeat(3,20%);    
+    align-content: center;
+    
+    gap: 20px;
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        
+
+    }
+ 
+ 
+    &__img-dos{
+        display: none;
+    }
+    
+
+    
+    &__img-cinco{
+        display: none;
+    }}
+
+
+
+@media (min-width:600px){
+    .rift{
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows:30%, 30%, 20%;
+      grid-template-areas: 
+      "uno dos cuatro"
+      "uno tres cuatro"
+      "cinco cinco cinco" ;
+        &__img{
+        
+        }
+        &__img-uno{
+            grid-area: uno;
+
+        }
+        &__img-dos{
+            display: block;
+            grid-area: dos;
+        }
+        &__img-tres{
+            grid-area: tres;
+        }
+        &__img-cuatro{
+            grid-area: cuatro;
+        }
+        &__img-cinco{
+            display: block;
+            grid-area: cinco;
+   
+
+        }
     }
 }
 
-@media (min-width:600px){
 
+
+.contact{
+    background-color: black;
+    color: aliceblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__form{
+      
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    &__field{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__legend{
+        
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -278,6 +373,16 @@
     }
    
 }
+
+
+
+
+
+
+
+
+
+
 
 
 @media (min-width:600px){
